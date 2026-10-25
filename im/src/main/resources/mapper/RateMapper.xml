@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qys.im.dao.RateDao">
+
+    <insert id="DoctorRate" parameterType="com.qys.im.pojo.Rate">
+        insert into doctor_rate(doctor_user,patient_user,name,answer_quality,answer_speed,answer_attitude,answer_quantity,answer_influence,answer_satisfaction)
+        values(#{doctor_user},#{patient_user},#{name},#{answer_quality},#{answer_speed},#{answer_attitude},#{answer_quantity},#{answer_influence},#{answer_satisfaction})
+    </insert>
+
+    <select id="SelectRate" resultType="java.util.Map">
+        select
+            answer_quality,
+            answer_speed,
+            answer_attitude,
+            answer_quantity,
+            answer_influence,
+            answer_satisfaction
+        from doctor_rate where doctor_user = #{username}
+    </select>
+</mapper>

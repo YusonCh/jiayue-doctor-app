@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qys.im.dao.UserPatientDao">
+
+    <insert id="signupByUserName" parameterType="com.qys.im.pojo.User_Patient">
+        insert into user_patient(user_name,password,connect)
+        values(#{username},#{password},#{connect})
+    </insert>
+
+    <select id="SelectUserPatient" resultType="java.util.Map">
+        select
+            *
+        from user_patient where user_name = #{username}
+    </select>
+
+    <update id="updateConnect" parameterType="java.lang.String">
+        update user_patient
+        set connect = #{connect} where user_name = #{username}
+    </update>
+
+    <update id="updateName" parameterType="java.lang.String">
+        update user_patient
+        set name = #{name} where user_name = #{username}
+    </update>
+
+    <update id="updateImage" parameterType="java.lang.String">
+        update user_patient
+        set image = #{image} where user_name = #{username}
+    </update>
+
+</mapper>

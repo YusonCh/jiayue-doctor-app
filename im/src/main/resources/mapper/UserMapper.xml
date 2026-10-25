@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qys.im.dao.UserDao">
+
+
+    <select id="getUserByUserName" resultType="com.qys.im.pojo.User">
+        select password from user where username = #{username}
+    </select>
+
+    <select id="getUserTypeByUserName" resultType="int">
+        select user_type from user where username = #{username}
+    </select>
+
+    <select id="SelectDoctorName" resultType="java.lang.String">
+        select username from user where user_type = #{user_type}
+    </select>
+
+    <insert id="InsertUser" parameterType="java.lang.Object">
+        insert user(username,password,user_type,id)
+            values (#{username},#{password},#{user_type},#{id})
+    </insert>
+
+    <select id="SelectId" resultType="java.lang.String">
+        select id from user where username = #{username}
+    </select>
+
+    <update id="UpdatePassword" parameterType="java.lang.String">
+        update user set password = #{password} where username = #{username}
+    </update>
+
+    <select id="SelectUser" resultType="java.util.Map">
+        select
+            username,
+            password,
+            user_type
+        from user
+    </select>
+
+    <update id="UpdateUser" parameterType="com.qys.im.pojo.User">
+        update user set password = #{password},user_type = #{usertype}
+        where username = #{username}
+    </update>
+
+    <delete id="DeleteUser" parameterType="com.qys.im.pojo.User">
+        delete from user where username = #{username} and user_type = #{usertype}
+    </delete>
+
+</mapper>

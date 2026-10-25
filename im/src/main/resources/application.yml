@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # Credentials are supplied through environment variables (see README). Never commit real values.
+    url: jdbc:mysql://${DB_HOST:127.0.0.1}:${DB_PORT:3306}/${DB_NAME:im}?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
+    hikari:
+      pool-name: DateHikariC
+      minimum-idle: 5
+      idle-timeout: 18000
+      maximum-pool-size: 10
+      auto-commit: true
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+
+jwt:
+  tokenHeader: Authorization
+  # Set JWT_SECRET in the environment; the default only keeps local development running.
+  secret: ${JWT_SECRET:dev-only-secret-change-me}
+  expiration: 1800000
+  tokenHead: Bearer
+
+# mybatis
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+
+server:
+  port: 8080

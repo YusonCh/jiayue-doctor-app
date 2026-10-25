@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qys.im.dao.DepartmentDao">
+
+    <select id="SelectDepartment" resultType="java.lang.String">
+        SELECT department FROM department
+    </select>
+
+    <select id="SelectHospital" resultType="java.lang.String">
+        SELECT hospital_name FROM hospital
+    </select>
+
+    <select id="SelectLevel" resultType="java.lang.String">
+        SELECT level_name FROM level
+    </select>
+
+</mapper>

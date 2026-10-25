@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qys.im.dao.TopsisDao">
+
+    <insert id="InsertEvaluation" parameterType="com.qys.im.pojo.Topsis">
+        insert into doctor_evaluate(user_name,name,answer_quality,answer_speed,answer_attitude,answer_quantity,answer_influence,answer_satisfaction)
+        values(#{user_name},'asda',#{answer_quality},#{answer_speed},#{answer_attitude},#{answer_quantity},#{answer_influence},#{answer_satisfaction})
+</insert>
+
+    <select id="SelectEvaluation" resultType="java.util.Map">
+        select
+            answer_quality,
+            answer_speed,
+            answer_attitude,
+            answer_quantity,
+            answer_influence,
+            answer_satisfaction
+        from doctor_evaluate where user_name = #{username}
+    </select>
+
+    <update id="UpdateResult">
+        update doctor_evaluate
+        <set>
+            comprehensive_evaluation = #{result}
+        </set>
+        where user_name=#{username}
+    </update>
+
+    <update id="UpdateEvaluation">
+        update doctor_evaluate
+        <set>
+            answer_quality = #{answer_quality},
+            answer_speed = #{answer_speed},
+            answer_attitude= #{answer_attitude},
+            answer_quantity= #{answer_quantity},
+            answer_influence= #{answer_influence},
+            answer_satisfaction= #{answer_satisfaction}
+        </set>
+        where user_name=#{username}
+    </update>
+
+
+</mapper>

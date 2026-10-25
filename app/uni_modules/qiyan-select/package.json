@@ -1,0 +1,18 @@
+{
+    "id": "qiyan-select",
+    "name": "可输入搜索的select组件",
+    "displayName": "可输入搜索的select组件",
+    "version": "1.0.1",
+    "description": "支持select输入，select分页，select多选",
+    "keywords": [
+        "select",
+        "multiple",
+        "page"
+    ],
+    "dcloudext": {
+        "category": [
+            "前端组件",
+            "通用组件"
+        ]
+    }
+}

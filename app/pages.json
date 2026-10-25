@@ -1,0 +1,489 @@
+{
+		
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "家约医生问诊服务APP",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"buttons": [
+			{
+				"text":"\ue7c0",
+				"fontSrc": "/static/logo.png",
+				"fontSize": "22px"
+			}
+		]
+	},
+	
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "家约医生问诊服务APP"
+				//首页
+			}
+		}
+	    ,{
+            "path" : "pages/login/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "navigationBarTitleText": "登录",
+				"app-plus": {
+					"titleNView": {
+					"titleSize": "18px",
+					"autoBackButton": true
+					}
+				}
+				//登录
+            }
+            
+        }
+		,{
+            "path" : "pages/signup/signup-patient",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "患者注册",
+				"app-plus": {
+					"titleNView": {
+					"titleSize": "18px",
+					"autoBackButton": true
+					}
+				}
+				//患者注册
+            }
+        }
+		,{
+		    "path" : "pages/signup/signup-doctor",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false,
+				"navigationBarTitleText": "医生注册",
+				"app-plus": {
+					"titleNView": {
+					"titleSize": "18px",
+					"autoBackButton": true
+					}
+				}
+				//医生注册
+		    }
+		    
+		}
+		,{
+		    "path" : "pages/main/index",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false,
+				"navigationBarTitleText": "家约医生问诊服务APP",
+				"app-plus": {
+					"titleNView": {
+					"titleSize": "18px",
+					"autoBackButton": true
+					}
+				}
+				//首页
+		    }
+		}
+        ,{
+            "path" : "pages/main/index_doctor",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+        		"navigationBarTitleText": "家约医生问诊服务APP",
+        		"app-plus": {
+        			"titleNView": {
+        			"titleSize": "18px",
+        			"autoBackButton": true
+        			}
+        		}
+        		//首页
+            }
+        }
+        ,{
+            "path" : "pages/main/health",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "家约医生问诊服务APP",
+                "enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+					"titleSize": "18px",
+					"autoBackButton": true
+					}//健康档案
+				}
+            }
+            
+        }
+		,{
+		    "path" : "pages/inquiry/patient_illness",
+		    "style" :                                                                                    
+		    {
+		       
+		        "enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+					"titleSize": "18px",
+					"autoBackButton": true
+					}//健康档案
+				}
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/main/personal_doctor",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationBarTitleText": "家约医生问诊服务APP",
+				"app-plus": {
+					"titleNView": {
+					"titleSize": "18px",
+					"autoBackButton": true
+					
+
+					}//医生主页
+				}
+            }
+            
+        }
+        ,{
+		    "path" : "pages/main/personal_patient",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false,
+				"navigationBarTitleText": "家约医生问诊服务APP",
+				"app-plus": {
+					"titleNView": {
+					"titleSize": "18px",
+					"autoBackButton": true
+					}
+				}//患者主页
+		
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/inquiry/doctor_choose",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            //选择医生
+        }
+        ,{
+            "path" : "pages/inquiry/doctor_select",
+			"style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }   
+        }
+		,{
+		    "path" : "pages/inquiry/doctor_select_famous",
+		    "style" :                                                                                    
+		    {
+		        "enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+					"titleSize": "18px",
+					"autoBackButton": true
+					}
+				}
+		    }   
+		}
+		,{
+		    "path" : "pages/inquiry/doctor_select_common",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "家约医生问诊服务APP",
+		        "enablePullDownRefresh": false
+				
+		    }   
+		}
+        ,{
+            "path" : "pages/inquiry/doctor_index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            //医生简介页面
+        }
+        ,{
+            "path" : "pages/chat/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "家约医生问诊服务APP",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/function_doctor/about",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/function_doctor/personal_information",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,{
+		    "path" : "pages/function_doctor/resume",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+		    "path" : "pages/function_doctor/system_set",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+		    "path" : "pages/function_patient/inquiry_record",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "系统设置",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/function_patient/about",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/function_patient/health",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,{
+		    "path" : "pages/main/health_doctor",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": true
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/function_patient/patient_information",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/function_patient/personal_information",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/function_patient/system_set",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        } ,{
+            "path" : "components/emoji/emoji",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/inquiry/inquiry_conclusion",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/inquiry/doctor_rate",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "store/Tabbar",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/chat/test",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/system/system_doctor",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/system/system_user",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/system/system_data",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+		    "path" : "pages/inquiry/inquiryReport",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+    ],
+	
+	
+	"tabBar": {
+		"color": "#333333",
+		"selectedColor": "#328CFA",
+		"backgroundColor": "#FFFFFF",
+		"list": [
+			{
+				"pagePath": "pages/main/index"
+			},
+			{
+				"pagePath": "pages/main/index_doctor"
+			},
+			{
+				"pagePath": "pages/main/health"
+			},
+			{
+				"pagePath": "pages/main/health_doctor"
+			},
+			{
+				"pagePath": "pages/main/personal_patient"
+			},
+			{
+				"pagePath": "pages/main/personal_doctor"
+			},
+			{
+				"pagePath": "pages/system/system_data"
+			},
+			{
+				"pagePath": "pages/system/system_doctor"
+			},
+			{
+				"pagePath": "pages/system/system_user"
+			}
+		]
+	},
+
+
+	// "tabBar": {
+	// 	"color": "#7A7E83",
+	// 	"selectedColor": "#3cc51f",
+	// 	"borderStyle": "black",
+	// 	"backgroundColor": "#ffffff",
+	// 	"iconWidth":"30px",
+	// 	"height": "70px",
+	// 	"list": [
+	// 	{
+	// 		"pagePath": "pages/main/index",
+	// 		"iconPath": "static/icon/home_before.png",
+	// 		"selectedIconPath": "static/icon/home_after.png",
+	// 		"text": "主页"
+	// 	}, 
+	// 	{
+	// 		"pagePath": "pages/main/health",
+	// 		"iconPath": "static/icon/menu_before.png",
+	// 		"selectedIconPath": "static/icon/menu_after.png",
+	// 		"text": "健康档案"
+	// 	}
+	// 	// ,
+	// 	//  {
+	// 	//  	"pagePath": "pages/main/personal_doctor",
+	// 	//  	"iconPath": "static/icon/my_before.png",
+	//  //         "selectedIconPath": "static/icon/my_after.png",
+	// 	//  	"text": "用户"
+	// 	//  }
+	// 	 ,
+	// 	 {
+	// 	 	"pagePath": "pages/main/personal_patient",
+	// 	 	"iconPath": "static/icon/my_before.png",
+	// 	 	"selectedIconPath": "static/icon/my_after.png",
+	// 	 	"text": "用户"
+	// 	 }
+		// ]
+
+	
+	"uniIdRouter": {}
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qys.im.dao.MsgDao">
+
+    <insert id="addMsg" parameterType="com.qys.im.pojo.Msg">
+        insert into msg(illness_id,sendUserName,receiveUserName,sendName,receiveName,sendText,updateTime,createTime,TextType)
+        values(#{illid},#{sendUserName},#{receiveUserName},#{sendName},#{receiveName},#{sendText},#{updateTime},#{createTime},#{TextType})
+    </insert>
+
+    <select id="selectMsg" resultType="java.util.Map" >
+        select
+            receiveUserName,
+            sendName,
+            receiveName,
+            sendText,
+            updateTime,
+            createTime,
+            TextType
+        from msg where sendUserName = #{sendUserName} and receiveUserName = #{receiveUserName} and illness_id = #{illid}
+    </select>
+
+    <select id="SelectMsg" resultType="java.util.Map">
+        select * from msg
+    </select>
+
+
+
+</mapper>

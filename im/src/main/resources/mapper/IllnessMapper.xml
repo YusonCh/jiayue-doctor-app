@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qys.im.dao.IllnessDao">
+
+
+    <select id="SelectIllnessReport" resultType="com.qys.im.pojo.Illness_Record">
+        select * from illness_record where username = #{username}
+    </select>
+
+    <select id="SelectNumber" resultType="java.lang.Integer">
+        select max(id) from illness_record;
+    </select>
+
+    <select id="SelectIllnessReportByDoctor" resultType="com.qys.im.pojo.Illness_Record">
+        select * from illness_record where doctor = #{username}
+    </select>
+
+    <select id="SelectIllness" resultType="com.qys.im.pojo.Illness_Record">
+        select * from illness_record where name = #{name} and doctor=#{doctor}
+    </select>
+
+    <insert id="InsertIllness" parameterType="com.qys.im.pojo.Illness_Record">
+        insert into illness_record (username,name,doctor,date,illness,end)
+        values (#{username},#{name},#{doctor},#{date},#{illness},#{end});
+    </insert>
+
+    <update id="UpdateIllness" parameterType="com.qys.im.pojo.Illness_Record">
+       update illness_record set reason=#{reason},medicine = #{medicine},diet=#{diet},cure = #{cure}
+        where id = #{id}
+    </update>
+
+</mapper>

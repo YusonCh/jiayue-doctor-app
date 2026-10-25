@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qys.im.dao.UserDoctorDao">
+
+    <select id="SelectAllDoctorInformation" resultType="java.lang.String">
+        select user_name from doctor_evaluate order by comprehensive_evaluation
+    </select>
+
+    <select id="SelectDoctor" resultType="java.util.Map">
+        select
+            *
+        from user_doctor where user_name = #{username}
+    </select>
+
+    <select id="SelectDoctorFamous" resultType="java.lang.String">
+        SELECT user_doctor.user_name
+        FROM user_doctor , doctor_evaluate
+        where user_doctor.user_name = doctor_evaluate.user_name
+          and user_doctor.`level`>2
+        ORDER BY doctor_evaluate.comprehensive_evaluation DESC
+    </select>
+
+    <select id="SelectDoctorDepartment" resultType="java.lang.String">
+        SELECT user_name
+        FROM user_doctor where department = #{department}
+    </select>
+
+    <select id="SelectDoctorName" resultType="java.lang.String">
+        SELECT user_name from user_doctor where name = #{name}
+    </select>
+
+    <insert id="InsertDoctor" parameterType="java.lang.String">
+        insert into user_doctor(user_name,password,level,department,name,hospital)
+        VALUES(#{user_name},#{password},#{level},#{department},#{name},#{hospital})
+    </insert>
+
+    <update id="UpdateResume" parameterType="java.lang.String">
+        Update user_doctor set resume = #{resume} where user_name = #{username}
+    </update>
+
+    <select id="SelectSystemDoctor" resultType="java.util.Map">
+        SELECT
+            user_name,
+            password,
+            name,
+            hospital,
+            department,
+            level
+        from user_doctor
+    </select>
+
+    <update id="UpdateSystemDoctor" parameterType="java.lang.String">
+        Update user_doctor set
+            password = #{password},
+            name = #{name},
+            hospital = #{hospital},
+            department = #{department},
+            level = #{level}
+        where user_name = #{username}
+    </update>
+
+    <delete id="DeleteDoctor" parameterType="java.lang.String">
+        delete from user_doctor where user_name = #{username}
+    </delete>
+
+    <select id="SelectUserPatient" resultType="java.util.Map">
+        select
+            *
+        from user_doctor where user_name = #{username}
+    </select>
+
+    <update id="updateConnect" parameterType="java.lang.String">
+        update user_doctor
+        set connect = #{connect} where user_name = #{username}
+    </update>
+
+    <update id="updateName" parameterType="java.lang.String">
+        update user_doctor
+        set name = #{name} where user_name = #{username}
+    </update>
+
+    <update id="updateImage" parameterType="java.lang.String">
+        update user_doctor
+        set image = #{image} where user_name = #{username}
+    </update>
+
+</mapper>

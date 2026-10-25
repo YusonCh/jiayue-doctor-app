@@ -1,0 +1,35 @@
+# 依赖
+node_modules/
+jspm_packages/
+
+# 构建产物
+target/
+dist/
+dist-ssr/
+unpackage/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.hbuilderx/
+nbproject/
+*.sublime-*
+
+# 日志与本地配置
+logs/
+*.log
+*.local
+npm-debug.log*
+yarn-error.log*
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini

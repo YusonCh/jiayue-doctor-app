@@ -1,0 +1,21 @@
+{
+    "id": "lb-picker",
+    "name": "lb-picker选择器",
+    "version": "v1.2.0",
+    "description": "支持app、nvue、h5、各小程序，支持单选、理论任意级数多级联动、非联动及日期选择。",
+    "keywords": [
+        "picker",
+        "多级联动",
+        "省市区",
+        "城市选择",
+        "date日期选择"
+    ],
+    "dependencies": {
+        "async-validator": "^1.11.5",
+        "element-ui": "^2.15.13",
+        "uview-ui": "^2.0.31"
+    },
+    "devDependencies": {
+        "babel-plugin-component": "^1.1.1"
+    }
+}
